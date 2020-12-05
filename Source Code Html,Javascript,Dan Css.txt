@@ -1,0 +1,229 @@
+<!-- Animasi Mengetik -->
+<script language="JavaScript">
+  var text="Membuat Form Login Dengan Html Dan Css";
+  var delay=20;
+  var currentChar=1;
+  var destination="[none]";
+  function type()
+  {
+  //if (document.all)
+  {
+  var dest=document.getElementById(destination);
+  if (dest)// && dest.innerHTML)
+  {
+  dest.innerHTML=text.substr(0, currentChar)+"<blink>_</blink>";
+  currentChar++;
+  if (currentChar>text.length)
+  {
+  currentChar=1;
+  setTimeout("type()", 5000);
+  }
+  else
+  {
+  setTimeout("type()", delay);
+  }
+  }
+  }
+  }
+  function startTyping(textParam, delayParam, destinationParam)
+  {
+  text=textParam;
+  delay=delayParam;
+  currentChar=1;
+  destination=destinationParam;
+  type();
+  }
+  </script> 
+  
+  
+  
+  <script language="JavaScript">
+  javascript:startTyping(text, 50, "textDestination");
+  </script>
+
+<b class="animasi"><div 0px="" 12px="" arial="" color:="" ff0000="" font:="" id="textDestination" margin:="" style="background-color: none;"></div></b>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.animasi {
+    font-size: 32px;
+    padding: 10px;
+    color: FireBrick;
+    font-weight: bolder;
+    font-family: 'Oswald';
+}
+
+.kontak {
+    margin-top: 70px;
+    background-color: rgba(102, 102, 102, 0.2);
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontak .wrapper h2 {
+    text-shadow: 0 4px 0px black;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 7px solid white;
+    display: inline-block;
+    padding-bottom: 7px;
+    margin-bottom: 40px;
+}
+
+.kontak .wrapper-kontak input, .kontak .wrapper-kontak textarea {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-bottom: 18px;
+    font-family: sans-serif;    
+}
+
+.kontak .wrapper-kontak input[type="submit"] {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 10px 30px;
+    border: 5px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: #feda5f;
+    display: inline-block;
+    padding-bottom: 23px;
+    width: auto;
+    cursor: pointer;
+    transition: background .5s ease;
+}
+
+.kontak .wrapper-kontak input[type="submit"]:hover {
+    background: orange;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.07);
+}
+
+.container-footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #2F4F4F;
+}
+
+/*Scroll Up*/
+.backTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;  
+    padding: 1em;
+    margin: 1em;
+    /* Margin Items*/
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    /* // Margin Items */
+    background: #DC143C;
+    color: white;
+    padding: 5px 14px;
+    font-size: 1.7rem;
+}
+
+.backTop:hover {
+    cursor: pointer;
+}
+
+/* // Scroll Up */
+
+.menu-footer {
+    display: flex;
+    align-items: start;
+}
+  
+.menu-1 h5 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+  
+.menu-3 {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 45px;
+    margin-top: 5px;
+    margin-right: 45px;
+    float: left;
+}
+  
+.menu-3 ul li a {
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-3 li {
+    list-style: none;
+    margin-bottom: 30px;
+} 
+  
+.icon .fab {
+    width: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+    color: black;
+ }
+  
+.icon {
+    display: inline-block;
+}
+  
+.icon p {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.icon h6 {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+  
+.copy {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.copy p {
+    color: white;
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .animasi {
+        max-width: 576px;
+        max-height: 676px;
+    }
+}
